@@ -77,7 +77,25 @@
       <div class="product_section_2">
         <div class="row">
           <div class="col-md-6">
-						       <a href="images/goodshit.mp3" target="_blank">Download</a>
+
+								  <button onclick="download()" type="button" name="button">download link.</button>
+
+								  <script>
+								    var x = document.getElementById("Isak-Voll-Kolstø-sin-audio");
+
+								    function download(filename, text) {
+								      var element = document.createElement('a');
+								      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+								      element.setAttribute('download', "images/goodshit.mp3");
+
+								      element.style.display = 'none';
+								      document.body.appendChild(element);
+
+								      element.click();
+
+								      dokument.body.removeChild(element);
+								    }
+								  </script>
           </div>
 
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/6hlTj-cK7XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
